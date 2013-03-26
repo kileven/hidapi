@@ -1,0 +1,3 @@
+usr/include/hidapi/*
+usr/lib/libhidapi-static.a
+usr/lib/libhidapi.so

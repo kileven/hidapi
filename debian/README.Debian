@@ -1,0 +1,9 @@
+Notes for the Debian hidapi packages:
+
+ To compile code against the shared hidapi library, use:
+
+   gcc -c code.c -o code.o -lhidapi
+
+ To compile code against the static hidapi library, use:
+
+   gcc -c code.c -o code.o -lhidapi-static

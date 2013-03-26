@@ -1,0 +1,40 @@
+Source: hidapi
+Priority: optional
+Section: devel
+Maintainer: Marius Zwicker <marius@mlba-team.de>
+Build-Depends: debhelper (>= 7.0.50~), quilt (>= 0.46-7~), cmake,
+ libc6, libgcc1, libudev-dev, doxygen
+Standards-Version: 3.9.1
+Vcs-Svn: https://github.com/signal11/hidapi.git
+Vcs-Browser: https://github.com/signal11/hidapi
+Homepage: http://www.signal11.us/oss/hidapi/
+
+Package: libhidapi
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: libhidapi-dev (= ${binary:Version})
+Description: A Simple library for communicating with USB and Bluetooth HID devices
+ HIDAPI is a multi-platform library which allows an application to
+ interface with USB and Bluetooth HID-Class devices on Windows, Linux, 
+ FreeBSD, and Mac OS X.  HIDAPI can be either built as a shared library 
+ (.so or .dll) or can be embedded directly into a target application by
+ adding a single source file (per platform) and a single header.
+
+Package: libhidapi-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libhidapi (= ${binary:Version})
+Description: Development Files - A Simple library for communicating with USB and Bluetooth HID devices
+ HIDAPI is a multi-platform library which allows an application to
+ interface with USB and Bluetooth HID-Class devices on Windows, Linux, 
+ FreeBSD, and Mac OS X.  HIDAPI can be either built as a shared library 
+ (.so or .dll) or can be embedded directly into a target application by
+ adding a single source file (per platform) and a single header.
+
+Package: hidapi-doc
+Section: universe/doc
+Architecture: all
+Depends: libhidapi-dev (= ${binary:Version})
+Description: A Simple library for communicating with USB and Bluetooth HID devices
+ Documentation files for using hidapi
